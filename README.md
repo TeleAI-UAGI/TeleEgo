@@ -107,8 +107,10 @@ TeleEgo/
 
 ### 📥 Dataset Access
 
-Due to privacy and licensing constraints, please request access here:
-📝 [**Dataset Access Form**](https://huggingface.co/datasets/David0219/TeleEgo).
+Request dataset from Hugging face:
+📝 [**TeleEgo Dataset**](https://huggingface.co/datasets/David0219/TeleEgo).
+
+Or Baidu Netdisk: 📝 [**TeleEgo Dataset**](https://pan.baidu.com/s/1T8LxTbrWIYUDXZlJyuR5Ew?pwd=ay5q).
 
 ### 🧪 Running Evaluations
 
@@ -160,14 +162,11 @@ Thanks to these amazing people for contributing to the project:
 If you find our **TeleEgo** in your research, please cite:
 
 ```bibtex
-@misc{yan2025teleegobenchmarkingegocentricai,
-      title={TeleEgo: Benchmarking Egocentric AI Assistants in the Wild}, 
-      author={Jiaqi Yan and Ruilong Ren and Jingren Liu and Shuning Xu and Ling Wang and Yiheng Wang and Yun Wang and Long Zhang and Xiangyu Chen and Changzhi Sun and Jixiang Luo and Dell Zhang and Hao Sun and Chi Zhang and Xuelong Li},
-      year={2025},
-      eprint={2510.23981},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2510.23981}, 
+@article{yan2025teleego,
+  title={TeleEgo: Benchmarking Egocentric AI Assistants in the Wild},
+  author={Yan, Jiaqi and Ren, Ruilong and Liu, Jingren and Xu, Shuning and Wang, Ling and Wang, Yiheng and Wang, Yun and Zhang, Long and Chen, Xiangyu and Sun, Changzhi and others},
+  journal={arXiv preprint arXiv:2510.23981},
+  year={2025}
 }
 ```
 
