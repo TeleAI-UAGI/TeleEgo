@@ -192,7 +192,11 @@ If you have any questions, please feel free to reach out: chxy95@gmail.com.
 
 <div align="center">
 
-<strong>✨ TeleEgo is an Omni benchmark, a step toward building personalized AI assistants with true long-term memory, reasoning and decision-making in real-world wearable scenarios. ✨</strong>
+TeleEgo is an Omni benchmark, a step toward building personalized AI assistants with true long-term memory, reasoning and decision-making in real-world wearable scenarios.
+
+**If you find this project helpful, please give us a ⭐️.**
+
+Made with ❤️ by the Ubiquitous AGI team at TeleAI.
 
 </div>
 
