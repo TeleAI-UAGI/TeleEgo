@@ -22,6 +22,15 @@
   📢 **Note**：This project is still under active development, and the benchmark will be continuously maintained.  
 </div>
 
+---
+
+<div align="left">
+
+**If you find this project helpful, please give us a ⭐️ on GitHub for the latest update.**
+
+</div>
+
+
 
 
 ## 📌 Introduction
@@ -193,8 +202,6 @@ If you have any questions, please feel free to reach out: chxy95@gmail.com.
 <div align="center">
 
 TeleEgo is an Omni benchmark, a step toward building personalized AI assistants with true long-term memory, reasoning and decision-making in real-world wearable scenarios.
-
-**If you find this project helpful, please give us a ⭐️.**
 
 Made with ❤️ by the Ubiquitous AGI team at TeleAI.
 
