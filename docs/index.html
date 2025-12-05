@@ -196,72 +196,40 @@
             font-size: 2.8em;
             font-weight: 800;
             margin-bottom: 20px;
-            color: var(--text-dark);
             text-align: center;
-        }
-
-        h2::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            margin: 20px auto 40px;
-            border-radius: 2px;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         h3 {
-            font-size: 1.8em;
+            font-size: 2em;
             font-weight: 700;
-            margin: 40px 0 20px;
-            color: var(--primary-color);
-        }
-
-        p {
             margin-bottom: 20px;
-            font-size: 1.05em;
-            color: var(--text-light);
+            color: var(--text-dark);
         }
 
-        /* Cards */
+        /* Feature Cards */
         .feature-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            margin: 50px 0;
+            margin-top: 60px;
         }
 
         .feature-card {
             background: white;
-            padding: 40px;
+            padding: 40px 30px;
             border-radius: 20px;
             box-shadow: var(--card-shadow);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 2px solid transparent;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .feature-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            transform: scaleX(0);
-            transition: transform 0.3s;
+            transition: all 0.3s;
+            border: 1px solid rgba(37,99,235,0.1);
         }
 
         .feature-card:hover {
             transform: translateY(-10px);
             box-shadow: var(--hover-shadow);
-            border-color: var(--primary-color);
-        }
-
-        .feature-card:hover::before {
-            transform: scaleX(1);
         }
 
         .feature-icon {
@@ -273,38 +241,28 @@
         .feature-card h4 {
             font-size: 1.4em;
             margin-bottom: 15px;
-            color: var(--text-dark);
+            color: var(--primary-color);
             font-weight: 700;
         }
 
         .feature-card p {
             color: var(--text-light);
-            line-height: 1.7;
+            line-height: 1.8;
         }
 
         /* Leaderboard */
         .leaderboard-section {
             margin: 60px 0;
-            background: white;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: var(--card-shadow);
         }
 
         .leaderboard-header {
-            margin-bottom: 30px;
             text-align: center;
+            margin-bottom: 30px;
         }
 
         .leaderboard-header h3 {
-            font-size: 2em;
-            font-weight: 700;
+            color: var(--primary-color);
             margin-bottom: 15px;
-            color: var(--text-dark);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
         }
 
         .leaderboard-description {
@@ -312,58 +270,83 @@
             color: var(--text-light);
             max-width: 800px;
             margin: 0 auto;
-            line-height: 1.7;
+            line-height: 1.6;
+        }
+
+        .table-caption {
+            background: linear-gradient(135deg, rgba(37,99,235,0.1), rgba(124,58,237,0.1));
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .table-caption strong {
+            color: var(--primary-color);
+            font-size: 1.1em;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .table-caption p {
+            color: var(--text-dark);
+            line-height: 1.8;
+            margin: 8px 0;
         }
 
         .table-wrapper {
             overflow-x: auto;
+            margin: 30px 0;
             border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            box-shadow: var(--card-shadow);
         }
 
-        .table-wrapper table {
+        table {
             width: 100%;
             border-collapse: collapse;
             background: white;
+            font-size: 0.95em;
         }
 
-        .table-wrapper th {
+        thead {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
-            padding: 18px 20px;
+        }
+
+        th {
+            padding: 20px 15px;
             text-align: center;
             font-weight: 700;
-            font-size: 1em;
-            border: none;
+            font-size: 0.95em;
         }
 
-        .table-wrapper th small {
+        th small {
             display: block;
-            font-size: 0.85em;
             font-weight: 500;
+            margin-top: 5px;
             opacity: 0.9;
-            margin-top: 3px;
         }
 
-        .table-wrapper td {
-            padding: 18px 20px;
-            border-bottom: 1px solid #e5e7eb;
-            color: var(--text-dark);
+        td {
+            padding: 18px 15px;
             text-align: center;
-            font-size: 1em;
+            border-bottom: 1px solid #e2e8f0;
         }
 
-        .table-wrapper tbody tr {
-            transition: all 0.3s;
-        }
-
-        .table-wrapper tbody tr:hover {
+        tbody tr:hover {
             background: rgba(37,99,235,0.05);
-            transform: scale(1.01);
         }
 
-        .table-wrapper tbody tr:last-child td {
-            border-bottom: none;
+        .rank-1 {
+            background: linear-gradient(to right, rgba(255,215,0,0.15), transparent);
+        }
+
+        .rank-2 {
+            background: linear-gradient(to right, rgba(192,192,192,0.15), transparent);
+        }
+
+        .rank-3 {
+            background: linear-gradient(to right, rgba(205,127,50,0.15), transparent);
         }
 
         .model-name {
@@ -372,127 +355,64 @@
             text-align: left;
         }
 
-        /* Top 3 Ranking Styles */
-        .rank-1 {
-            background: linear-gradient(90deg, rgba(255,215,0,0.15), transparent);
-        }
-
-        .rank-1 td:first-child {
-            font-size: 1.2em;
-            font-weight: 800;
-        }
-
-        .rank-1 .model-name {
-            color: #d97706;
-            font-size: 1.1em;
-        }
-
-        .rank-2 {
-            background: linear-gradient(90deg, rgba(192,192,192,0.15), transparent);
-        }
-
-        .rank-2 td:first-child {
-            font-size: 1.15em;
-            font-weight: 800;
-        }
-
-        .rank-2 .model-name {
-            color: #6b7280;
-            font-size: 1.05em;
-        }
-
-        .rank-3 {
-            background: linear-gradient(90deg, rgba(205,127,50,0.15), transparent);
-        }
-
-        .rank-3 td:first-child {
-            font-size: 1.1em;
-            font-weight: 800;
-        }
-
-        .rank-3 .model-name {
-            color: #92400e;
-            font-size: 1.05em;
-        }
-
-        .rank-badge {
-            display: inline-block;
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #fbbf24, #f59e0b);
-            color: white;
-            text-align: center;
-            line-height: 35px;
-            font-weight: 700;
-            font-size: 1.1em;
-        }
-
-        .rank-badge.silver {
-            background: linear-gradient(135deg, #d1d5db, #9ca3af);
-        }
-
-        .rank-badge.bronze {
-            background: linear-gradient(135deg, #fca5a5, #f87171);
-        }
-
-        .leaderboard-table {
-            width: 100%;
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: var(--card-shadow);
-            margin: 40px 0;
-        }
-
-        .leaderboard-table table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .leaderboard-table th {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            padding: 20px;
-            text-align: left;
-            font-weight: 700;
-            font-size: 1.05em;
-        }
-
-        .leaderboard-table td {
-            padding: 20px;
-            border-bottom: 1px solid #e5e7eb;
-            color: var(--text-dark);
-        }
-
-        .leaderboard-table tr:hover {
-            background: rgba(37,99,235,0.05);
-        }
-
         /* Metrics */
         .metric-card {
-            background: linear-gradient(135deg, rgba(37,99,235,0.05), rgba(124,58,237,0.05));
-            padding: 30px;
-            border-radius: 15px;
-            margin: 30px 0;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: var(--card-shadow);
+            margin: 40px 0;
             border-left: 5px solid var(--primary-color);
         }
 
         .metric-title {
-            font-size: 1.5em;
+            font-size: 1.8em;
             font-weight: 700;
             color: var(--primary-color);
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
-        .metric-formula {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            font-family: 'Courier New', monospace;
-            margin: 20px 0;
-            border: 2px dashed var(--primary-color);
+        .metric-card p {
             color: var(--text-dark);
+            line-height: 1.8;
+            margin: 15px 0;
+        }
+
+        .metric-card ul {
+            margin: 20px 0 20px 30px;
+            color: var(--text-dark);
+        }
+
+        .metric-card li {
+            margin: 10px 0;
+            line-height: 1.8;
+        }
+
+        .mpt-notice {
+            background: linear-gradient(135deg, rgba(251,191,36,0.1), rgba(245,158,11,0.1));
+            border-left: 5px solid #f59e0b;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+
+        .mpt-notice h4 {
+            color: #d97706;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .mpt-notice p {
+            color: var(--text-dark);
+            line-height: 1.8;
+            margin: 12px 0;
+        }
+
+        .mpt-notice strong {
+            color: #d97706;
         }
 
         /* Timeline */
@@ -505,38 +425,24 @@
             content: '';
             position: absolute;
             left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
             transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
         }
 
         .timeline-item {
             display: flex;
-            margin: 40px 0;
+            margin: 60px 0;
             position: relative;
         }
 
         .timeline-item:nth-child(odd) {
-            flex-direction: row-reverse;
+            flex-direction: row;
         }
 
-        .timeline-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8em;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 10;
-            box-shadow: 0 4px 15px rgba(37,99,235,0.3);
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
         }
 
         .timeline-content {
@@ -545,61 +451,83 @@
             padding: 30px;
             border-radius: 15px;
             box-shadow: var(--card-shadow);
-            transition: all 0.3s;
+            position: relative;
         }
 
         .timeline-item:nth-child(odd) .timeline-content {
             margin-right: auto;
-            margin-left: 55%;
         }
 
         .timeline-item:nth-child(even) .timeline-content {
             margin-left: auto;
-            margin-right: 55%;
         }
 
-        .timeline-content:hover {
-            transform: scale(1.05);
-            box-shadow: var(--hover-shadow);
+        .timeline-icon {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            background: white;
+            border: 4px solid var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            box-shadow: 0 4px 15px rgba(37,99,235,0.3);
         }
 
-        /* Code blocks */
-        pre {
+        /* Dataset Stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: var(--card-shadow);
+            transition: all 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px) scale(1.02);
+        }
+
+        .stat-number {
+            font-size: 3em;
+            font-weight: 800;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        /* Citation */
+        .citation-box {
             background: var(--dark-bg);
-            color: #e2e8f0;
+            color: #94a3b8;
             padding: 30px;
             border-radius: 15px;
             overflow-x: auto;
+            font-family: 'Courier New', monospace;
             margin: 30px 0;
-            box-shadow: var(--card-shadow);
-        }
-
-        code {
-            font-family: 'Fira Code', 'Courier New', monospace;
-            font-size: 0.95em;
-            line-height: 1.6;
-        }
-
-        .code-comment {
-            color: #10b981;
-        }
-
-        /* Citation Box */
-        .citation-box {
-            background: var(--dark-bg);
-            color: #e2e8f0;
-            padding: 30px;
-            border-radius: 15px;
-            border-left: 5px solid var(--primary-color);
-            max-width: 900px;
-            margin: 0 auto;
-            box-shadow: var(--card-shadow);
         }
 
         .citation-box code {
             display: block;
-            white-space: pre-wrap;
-            word-wrap: break-word;
+            white-space: pre;
+            font-size: 0.9em;
+            line-height: 1.8;
         }
 
         /* Submit Section Styles */
@@ -608,74 +536,60 @@
             padding: 40px;
             border-radius: 20px;
             box-shadow: var(--card-shadow);
-            margin: 30px 0;
-            border: 2px solid transparent;
-            transition: all 0.3s;
-        }
-
-        .submit-method:hover {
-            border-color: var(--primary-color);
-            transform: translateY(-5px);
-            box-shadow: var(--hover-shadow);
+            margin: 40px 0;
+            border-top: 5px solid var(--primary-color);
         }
 
         .submit-method h3 {
             color: var(--primary-color);
-            margin-top: 0;
             display: flex;
             align-items: center;
             gap: 15px;
+            margin-bottom: 20px;
         }
 
-        .submit-method .method-icon {
-            font-size: 2em;
+        .method-icon {
+            font-size: 1.8em;
         }
 
         .submit-steps {
             background: rgba(37,99,235,0.05);
             padding: 25px;
-            border-radius: 15px;
+            border-radius: 10px;
             margin: 20px 0;
         }
 
         .submit-steps ol {
-            margin-left: 20px;
+            margin: 15px 0 0 25px;
             line-height: 2;
         }
 
         .submit-steps li {
-            margin: 10px 0;
+            margin: 12px 0;
             color: var(--text-dark);
         }
 
         .submit-steps code {
-            background: white;
+            background: rgba(37,99,235,0.1);
             padding: 3px 8px;
             border-radius: 5px;
+            font-family: 'Courier New', monospace;
             color: var(--primary-color);
             font-size: 0.9em;
         }
 
         .requirements-box {
-            background: linear-gradient(135deg, rgba(124,58,237,0.1), rgba(37,99,235,0.1));
-            padding: 25px;
+            background: white;
+            border: 2px solid var(--primary-color);
             border-radius: 15px;
-            border-left: 4px solid var(--secondary-color);
-            margin: 20px 0;
+            padding: 30px;
+            margin: 30px 0;
         }
 
         .requirements-box h4 {
-            color: var(--secondary-color);
+            color: var(--primary-color);
             margin-bottom: 15px;
-        }
-
-        .requirements-box ul {
-            margin-left: 20px;
-            line-height: 2;
-        }
-
-        .requirements-box li {
-            color: var(--text-dark);
+            font-size: 1.3em;
         }
 
         .json-example {
@@ -683,19 +597,19 @@
             color: #e2e8f0;
             padding: 25px;
             border-radius: 10px;
-            margin: 20px 0;
             overflow-x: auto;
-            font-family: 'Fira Code', monospace;
-            font-size: 0.9em;
-            line-height: 1.6;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85em;
+            line-height: 1.8;
+            margin-top: 15px;
         }
 
         .json-key {
-            color: #fbbf24;
+            color: #7dd3fc;
         }
 
         .json-string {
-            color: #10b981;
+            color: #86efac;
         }
 
         .json-number {
@@ -829,10 +743,6 @@
         <div class="hero-content">
             <h1>TeleEgo Benchmark</h1>
             <div class="subtitle">Live-in-the-Wild Personal Assistant Benchmark</div>
-            <!-- <p class="description">
-                A comprehensive benchmark for evaluating AI personal assistants in real-world, continuous streaming scenarios 
-                with multi-modal perception and long-term memory capabilities.
-            </p> -->
             
             <div class="hero-badges">
                 <span class="badge">🎥 Egocentric Video</span>
@@ -850,6 +760,9 @@
                 </a>
                 <a href="https://huggingface.co/datasets/David0219/TeleEgo" class="btn" target="_blank">
                     🤗 Dataset
+                </a>
+                <a href="https://seline02.github.io/2025/11/10/TeleEgo-%E6%B5%81%E5%BC%8F%E5%85%A8%E6%A8%A1%E6%80%81%E7%AC%AC%E4%B8%80%E4%BA%BA%E7%A7%B0%E8%AF%84%E6%B5%8B%E5%9F%BA%E5%87%86/" class="btn" target="_blank">
+                    📝 Blog (中文)
                 </a>
             </div>
         </div>
@@ -917,15 +830,21 @@
         <div class="container">
             <h2>Leaderboard</h2>
             <p style="text-align: center; max-width: 900px; margin: 0 auto 60px; font-size: 1.1em;">
-                Comprehensive evaluation results on TeleEgo benchmark. Models are tested on both Test Set A (public) and Test Set B (hidden).
+                Comprehensive Real-Time Accuracy (RTA) evaluation results on TeleEgo benchmark. 
+                Models are evaluated on a single participant's video under strict streaming protocol.
             </p>
 
-            <!-- Test Set A Leaderboard -->
+            <!-- Table 3: Proprietary API Models -->
             <div class="leaderboard-section">
-                <div class="leaderboard-header">
-                    <h3>🏆 Test Set A (Public Leaderboard)</h3>
-                    <p class="leaderboard-description">
-                        Public test set with released ground truth. Models can be fine-tuned and optimized on this set.
+                <div class="table-caption fade-in">
+                    <strong>Table 1: RTA results of proprietary MLLMs on TeleEgo (single-video evaluation)</strong>
+                    <p>
+                        GPT-4o and Gemini-2.5-Pro are evaluated via API calls with internal implementations opaque. 
+                        Due to extensive video duration (~14 hours) and API latency, both models were evaluated on the same participant's video for fair comparison.
+                    </p>
+                    <p>
+                        <strong>Key Observations:</strong> GPT-4o shows strong Understanding performance (66.67%), especially on Intent Inference (81.81%) and Causal Understanding (81.58%), 
+                        leveraging its general-purpose reasoning. However, performance drops on Memory (42.18%) and Cross-Memory Reasoning (44.23%) where fine-grained temporal binding is critical.
                     </p>
                 </div>
 
@@ -933,81 +852,94 @@
                     <table>
                         <thead>
                             <tr>
-                                <th>Rank</th>
-                                <th>Model</th>
-                                <th>Memory<br><small>(Avg %)</small></th>
-                                <th>Understanding<br><small>(Avg %)</small></th>
-                                <th>Cross-Memory<br><small>(Avg %)</small></th>
-                                <th>Overall<br><small>(Avg %)</small></th>
-                                <th>MPT<br><small>(minutes)</small></th>
+                                <th rowspan="2">Method</th>
+                                <th rowspan="2">Params</th>
+                                <th rowspan="2">Omni</th>
+                                <th rowspan="2">Streaming</th>
+                                <th colspan="6">Memory (%)</th>
+                                <th colspan="5">Understanding (%)</th>
+                                <th colspan="4">Cross-Memory Reasoning (%)</th>
+                                <th rowspan="2">Overall</th>
+                            </tr>
+                            <tr>
+                                <th>UlM</th>
+                                <th>StM</th>
+                                <th>ET</th>
+                                <th>TCI</th>
+                                <th>LtM</th>
+                                <th>All</th>
+                                <th>II</th>
+                                <th>CU</th>
+                                <th>CmU</th>
+                                <th>MsR</th>
+                                <th>All</th>
+                                <th>CeR</th>
+                                <th>TCU</th>
+                                <th>CtC</th>
+                                <th>All</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr class="rank-1">
-                                <td>🥇 1</td>
                                 <td class="model-name">GPT-4o</td>
-                                <td>42.69</td>
-                                <td>60.92</td>
-                                <td>45.87</td>
-                                <td>48.04</td>
-                                <td>3.01</td>
+                                <td>-</td>
+                                <td>✓</td>
+                                <td>-</td>
+                                <td>42.31</td>
+                                <td>40.58</td>
+                                <td>31.91</td>
+                                <td>47.37</td>
+                                <td>52.78</td>
+                                <td>42.18</td>
+                                <td>81.81</td>
+                                <td>81.58</td>
+                                <td>45.71</td>
+                                <td>50.00</td>
+                                <td>66.67</td>
+                                <td>44.44</td>
+                                <td>40.00</td>
+                                <td>45.00</td>
+                                <td>44.23</td>
+                                <td>48.94</td>
                             </tr>
                             <tr class="rank-2">
-                                <td>🥈 2</td>
                                 <td class="model-name">Gemini-2.5-Pro</td>
-                                <td>42.23</td>
-                                <td>57.98</td>
-                                <td>40.26</td>
-                                <td>46.35</td>
-                                <td>2.76</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td class="model-name">MiniCPM-o</td>
-                                <td>40.36</td>
-                                <td>50.19</td>
-                                <td>38.28</td>
-                                <td>42.84</td>
-                                <td>2.19</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td class="model-name">Qwen2.5-VL-2.5</td>
-                                <td>34.24</td>
-                                <td>35.89</td>
-                                <td>27.39</td>
-                                <td>33.96</td>
-                                <td>1.60</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td class="model-name">Videochat-Online</td>
-                                <td>28.91</td>
-                                <td>41.76</td>
-                                <td>29.04</td>
-                                <td>32.46</td>
-                                <td>1.33</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td class="model-name">Qwen2.5-Omni</td>
-                                <td>25.34</td>
-                                <td>27.33</td>
-                                <td>20.13</td>
-                                <td>25.33</td>
-                                <td>1.00</td>
+                                <td>-</td>
+                                <td>✓</td>
+                                <td>-</td>
+                                <td>49.04</td>
+                                <td>45.59</td>
+                                <td>34.04</td>
+                                <td>47.37</td>
+                                <td>44.44</td>
+                                <td>45.05</td>
+                                <td>63.64</td>
+                                <td>55.26</td>
+                                <td>37.14</td>
+                                <td>28.57</td>
+                                <td>48.03</td>
+                                <td>40.74</td>
+                                <td>40.00</td>
+                                <td>45.00</td>
+                                <td>42.31</td>
+                                <td>45.55</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
 
-            <!-- Test Set B Leaderboard -->
+            <!-- Table 4: Pseudo-streaming Open-source Models -->
             <div class="leaderboard-section">
-                <div class="leaderboard-header">
-                    <h3>🔒 Test Set B (Hidden Test Set) Continue...</h3>
-                    <p class="leaderboard-description">
-                        Hidden test set for unbiased evaluation. Ground truth is not released. Submit your model predictions for evaluation.
+                <div class="table-caption fade-in">
+                    <strong>Table 2: RTA results of pseudo-streaming open-source MLLMs on TeleEgo</strong>
+                    <p>
+                        These models lack cross-call memory mechanisms and process each input unit independently. They are categorized as “pseudo-streaming” because they do not natively support continuous streaming interaction. In our evaluation, we deliberately avoid supplying any uncompressed historical context to the models—otherwise, the burden of memory would be shifted to the context window rather than truly examining their intrinsic memory capability. Therefore, they are evaluated under a strict streaming protocol, ensuring that performance reflects the models’ genuine ability to retain information over time. 
+                    </p>
+                    <p>
+                        <strong>Key Observations:</strong> VideoChat-Online, Qwen2.5-VL, and Qwen2.5-Omni achieve manageable Understanding performance 
+                        but struggle significantly on Memory and Cross-Memory Reasoning tasks. Among the three, Qwen2.5-Omni achieves the highest overall RTA (46.96%), 
+                        primarily because it has stronger base model capabilities and avoids ASR transcription errors by directly processing audio.
                     </p>
                 </div>
 
@@ -1015,77 +947,264 @@
                     <table>
                         <thead>
                             <tr>
-                                <th>Rank</th>
-                                <th>Model</th>
-                                <th>Memory<br><small>(Avg %)</small></th>
-                                <th>Understanding<br><small>(Avg %)</small></th>
-                                <th>Cross-Memory<br><small>(Avg %)</small></th>
-                                <th>Overall<br><small>(Avg %)</small></th>
-                                <th>MPT<br><small>(minutes)</small></th>
+                                <th rowspan="2">Method</th>
+                                <th rowspan="2">Params</th>
+                                <th rowspan="2">Omni</th>
+                                <th rowspan="2">Streaming</th>
+                                <th colspan="6">Memory (%)</th>
+                                <th colspan="5">Understanding (%)</th>
+                                <th colspan="4">Cross-Memory Reasoning (%)</th>
+                                <th rowspan="2">Overall</th>
+                            </tr>
+                            <tr>
+                                <th>UlM</th>
+                                <th>StM</th>
+                                <th>ET</th>
+                                <th>TCI</th>
+                                <th>LtM</th>
+                                <th>All</th>
+                                <th>II</th>
+                                <th>CU</th>
+                                <th>CmU</th>
+                                <th>MsR</th>
+                                <th>All</th>
+                                <th>CeR</th>
+                                <th>TCU</th>
+                                <th>CtC</th>
+                                <th>All</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="rank-1">
-                                <td>🥇 1</td>
-                                <td class="model-name">GPT-4o</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                            </tr>
-                            <tr class="rank-2">
-                                <td>🥈 2</td>
-                                <td class="model-name">Gemini-2.5-Pro</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
+                            <tr>
+                                <td class="model-name">VideoChat-Online</td>
+                                <td>4B</td>
+                                <td>✗</td>
+                                <td> </td>
+                                <td>30.74</td>
+                                <td>26.29</td>
+                                <td>19.35</td>
+                                <td>29.84</td>
+                                <td>22.78</td>
+                                <td>26.69</td>
+                                <td>57.35</td>
+                                <td>44.13</td>
+                                <td>35.44</td>
+                                <td>27.89</td>
+                                <td>42.34</td>
+                                <td>18.79</td>
+                                <td>32.00</td>
+                                <td>41.60</td>
+                                <td>29.43</td>
+                                <td>31.28</td>
                             </tr>
                             <tr>
-                                <td>3</td>
-                                <td class="model-name">MiniCPM-o</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
+                                <td class="model-name">Qwen2.5-VL</td>
+                                <td>3B</td>
+                                <td>✗</td>
+                                <td>✗</td>
+                                <td>45.42</td>
+                                <td>42.01</td>
+                                <td>31.18</td>
+                                <td>37.90</td>
+                                <td>33.33</td>
+                                <td>39.66</td>
+                                <td>66.35</td>
+                                <td>53.99</td>
+                                <td>47.57</td>
+                                <td>41.50</td>
+                                <td>53.28</td>
+                                <td>32.89</td>
+                                <td>48.00</td>
+                                <td>52.00</td>
+                                <td>42.14</td>
+                                <td>43.67</td>
                             </tr>
                             <tr>
-                                <td>4</td>
-                                <td class="model-name">Qwen2.5-VL-2.5</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td class="model-name">Videochat-Online</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
                                 <td class="model-name">Qwen2.5-Omni</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
+                                <td>7B</td>
+                                <td>✓</td>
+                                <td> </td>
+                                <td>44.21</td>
+                                <td>42.75</td>
+                                <td>35.48</td>
+                                <td>41.13</td>
+                                <td>37.97</td>
+                                <td>41.20</td>
+                                <td>72.51</td>
+                                <td>61.50</td>
+                                <td>50.00</td>
+                                <td>48.98</td>
+                                <td>59.07</td>
+                                <td>37.58</td>
+                                <td>56.00</td>
+                                <td>61.60</td>
+                                <td>49.16</td>
+                                <td>46.96</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
 
-            <p style="text-align: center; margin-top: 30px; font-style: italic; color: var(--text-light);">
-                🚀 Be among the first to submit your results! <a href="#submit" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">Submit now →</a>
+            <!-- Table 5: MiniCPM-o with varying session lengths -->
+            <div class="leaderboard-section">
+                <div class="table-caption fade-in">
+                    <strong>Table 3: RTA results of MiniCPM-o with varying session lengths on TeleEgo</strong>
+                    <p>
+                        MiniCPM-o is the only model in our study with an explicit streaming interface that accepts chunk-wise incremental input. 
+                        However, it lacks dynamic memory management: the KV cache grows without compression, eviction, or sliding window, 
+                        causing GPU memory overflow and attention dilution as video length increases.
+                    </p>
+                    <p>
+                        <strong>Key Observations:</strong> RTA results indicate an optimal session length of about 1 minute (54.10% overall), 
+                        with poorer performance at both shorter (50.60% at 1s) and longer intervals (30.15% at 10min). At longer intervals, 
+                        the model often produces incoherent or off-topic responses, confirming that naive KV cache accumulation without memory management 
+                        is insufficient for sustained streaming.
+                    </p>
+                </div>
+
+                <div class="table-wrapper fade-in">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th rowspan="2">Method</th>
+                                <th rowspan="2">Params</th>
+                                <th rowspan="2">Omni</th>
+                                <th rowspan="2">Streaming</th>
+                                <th rowspan="2">Session<br>Length</th>
+                                <th colspan="6">Memory (%)</th>
+                                <th colspan="5">Understanding (%)</th>
+                                <th colspan="4">Cross-Memory Reasoning (%)</th>
+                                <th rowspan="2">Overall</th>
+                            </tr>
+                            <tr>
+                                <th>UlM</th>
+                                <th>StM</th>
+                                <th>ET</th>
+                                <th>TCI</th>
+                                <th>LtM</th>
+                                <th>All</th>
+                                <th>II</th>
+                                <th>CU</th>
+                                <th>CmU</th>
+                                <th>MsR</th>
+                                <th>All</th>
+                                <th>CeR</th>
+                                <th>TCU</th>
+                                <th>CtC</th>
+                                <th>All</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="model-name" rowspan="5">MiniCPM-o</td>
+                                <td rowspan="5">8B</td>
+                                <td rowspan="5">✓</td>
+                                <td rowspan="5">✓</td>
+                                <td>1sec</td>
+                                <td>51.99</td>
+                                <td>51.60</td>
+                                <td>35.13</td>
+                                <td>47.58</td>
+                                <td>44.30</td>
+                                <td>47.54</td>
+                                <td>75.83</td>
+                                <td>61.50</td>
+                                <td>51.94</td>
+                                <td>44.22</td>
+                                <td>59.59</td>
+                                <td>28.19</td>
+                                <td>48.00</td>
+                                <td>64.80</td>
+                                <td>45.15</td>
+                                <td>50.60</td>
+                            </tr>
+                            <tr>
+                                <td>1min</td>
+                                <td>50.60</td>
+                                <td>55.53</td>
+                                <td>37.28</td>
+                                <td>53.63</td>
+                                <td>51.05</td>
+                                <td>50.11</td>
+                                <td>80.57</td>
+                                <td>69.48</td>
+                                <td>56.80</td>
+                                <td>51.02</td>
+                                <td>65.64</td>
+                                <td>33.56</td>
+                                <td>36.00</td>
+                                <td>66.40</td>
+                                <td>47.49</td>
+                                <td>54.10</td>
+                            </tr>
+                            <tr>
+                                <td>3min</td>
+                                <td>48.19</td>
+                                <td>52.58</td>
+                                <td>37.28</td>
+                                <td>49.19</td>
+                                <td>45.99</td>
+                                <td>47.31</td>
+                                <td>73.93</td>
+                                <td>63.38</td>
+                                <td>53.88</td>
+                                <td>40.14</td>
+                                <td>59.33</td>
+                                <td>32.89</td>
+                                <td>32.00</td>
+                                <td>66.40</td>
+                                <td>46.82</td>
+                                <td>50.57</td>
+                            </tr>
+                            <tr>
+                                <td>5min</td>
+                                <td>43.00</td>
+                                <td>44.23</td>
+                                <td>33.69</td>
+                                <td>47.58</td>
+                                <td>37.55</td>
+                                <td>41.71</td>
+                                <td>63.51</td>
+                                <td>56.34</td>
+                                <td>44.17</td>
+                                <td>43.54</td>
+                                <td>52.64</td>
+                                <td>23.49</td>
+                                <td>32.00</td>
+                                <td>56.80</td>
+                                <td>38.13</td>
+                                <td>44.34</td>
+                            </tr>
+                            <tr>
+                                <td>10min</td>
+                                <td>28.50</td>
+                                <td>28.01</td>
+                                <td>23.66</td>
+                                <td>30.65</td>
+                                <td>26.16</td>
+                                <td>27.60</td>
+                                <td>41.71</td>
+                                <td>40.38</td>
+                                <td>34.95</td>
+                                <td>29.93</td>
+                                <td>37.32</td>
+                                <td>15.44</td>
+                                <td>36.00</td>
+                                <td>37.60</td>
+                                <td>26.42</td>
+                                <td>30.15</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <p style="text-align: center; margin-top: 40px; font-style: italic; color: var(--text-light);">
+                <strong>Note:</strong> Columns are grouped into three capability blocks: Memory, Understanding, and Cross-Memory Reasoning, 
+                with an "All" column summarizing each block and an "Overall" column aggregating across blocks. 
+                "Omni" denotes integrated audio-video-text perception; "Streaming" denotes native support for streaming interaction. 
+                A ✓ indicates the capability is supported, ✗ indicates not supported, and "-" indicates unknown.
             </p>
         </div>
     </section>
@@ -1098,54 +1217,80 @@
             <div class="metric-card fade-in">
                 <div class="metric-title">⚡ Real-Time Accuracy (RTA)</div>
                 <p>
-                    Measures whether the model can produce a correct answer <strong>within the decision window</strong> 
-                    (time interval between question arrival and deadline). This reflects practical usability 
-                    in streaming scenarios.
+                    <strong>RTA measures the percentage of questions answered correctly within a strict time window (5 seconds).</strong>
+                    This metric simulates real-world scenarios where personal assistants must respond promptly.
                 </p>
-                <div class="metric-formula">
-                    RTA = (# correctly answered within decision window) / (# total questions)
-                </div>
-                <p style="margin-top: 15px; font-size: 0.95em; color: var(--text-light);">
-                    Only the <em>first correct output</em> within the decision window receives credit.
+                <p>
+                    Unlike traditional offline evaluation, RTA enforces temporal constraints:
+                </p>
+                <ul>
+                    <li><strong>Decision Window:</strong> Models have only 5 seconds after question trigger to respond</li>
+                    <li><strong>First-Attempt Only:</strong> Only the first response is evaluated (no retries)</li>
+                    <li><strong>Streaming Protocol:</strong> Questions arrive dynamically throughout video playback</li>
+                </ul>
+                <p>
+                    RTA is calculated as: <strong>(Questions answered correctly within time window) / (Total questions) × 100%</strong>
                 </p>
             </div>
 
             <div class="metric-card fade-in">
-                <div class="metric-title">⏱️ Memory Persistence Time (MPT)</div>
+                <div class="metric-title">🧠 Memory Persistence Time (MPT)</div>
                 <p>
-                    Among questions initially answered correctly, MPT measures <strong>how long the model can still recover 
-                    the correct answer without re-exposure</strong> to the underlying evidence.
+                    <strong>MPT measures how long a model retains information after initially answering correctly.</strong>
+                    For questions answered correctly at time t*, the system schedules recall tests at t* + Δ intervals (Δ = 60s, r = 1,2,...,10).
                 </p>
-                <div class="metric-formula">
-                    MPT = Average retention time across correctly answered items
-                </div>
-                <p style="margin-top: 15px; font-size: 0.95em; color: var(--text-light);">
-                    Higher MPT indicates better long-horizon memory retention.
+                <p>
+                    Key characteristics:
+                </p>
+                <ul>
+                    <li><strong>No Evidence Replay:</strong> During recall, only current video stream is accessible (no re-showing of original evidence)</li>
+                    <li><strong>Early Stopping:</strong> Once a recall test fails, subsequent tests are removed from the schedule</li>
+                    <li><strong>MPT Calculation:</strong> Time from t* to first recall failure (capped at 600 seconds for models passing all 10 recalls)</li>
+                </ul>
+            </div>
+
+            <!-- MPT Current Status Notice -->
+            <div class="mpt-notice fade-in">
+                <h4>⚠️ About MPT Evaluation Status</h4>
+                <p>
+                    <strong>Currently, we have not included MPT results in our evaluation tables.</strong> This is because MPT requires models to demonstrate 
+                    <strong>genuine long-term memory capabilities</strong> - the ability to not only answer correctly when information first appears, 
+                    but also retain and recall that information long after it has disappeared from the input stream.
+                </p>
+                <p>
+                    <strong>Why current models are not suitable for MPT evaluation:</strong>
+                </p>
+                <ul>
+                    <li><strong>Pseudo-streaming models</strong> (VideoChat-Online, Qwen2.5-VL, Qwen2.5-Omni): Each call is independent with no cross-call memory. 
+                    If they answer correctly in both initial and recall phases, we cannot distinguish between "remembered" vs "guessed correctly twice".</li>
+                    <li><strong>API models</strong> (GPT-4o, Gemini-2.5-Pro): Their internal implementations are black boxes. In our evaluation setup (without 
+                    accumulating raw history), they face the same issue as pseudo-streaming models.</li>
+                    <li><strong>Streaming model</strong> (MiniCPM-o): Although it supports streaming input and maintains KV cache across calls, we must manually 
+                    reset sessions every few minutes to prevent memory overflow and generation quality degradation. This means if an initial test and its recall 
+                    span across a session boundary, the model's memory is artificially cleared - making MPT measurements unreliable.</li>
+                </ul>
+                <p>
+                    <strong>MPT is a forward-looking metric</strong> that aligns with TeleEgo's goal of evaluating realistic long-term egocentric assistants. 
+                    We look forward to the emergence of models with true long-horizon streaming memory - rare few can run continuously for hours without resets 
+                    while maintaining stable generation quality. <strong>We anticipate that future truly streaming MLLMs with dynamic memory management will enable 
+                    meaningful MPT evaluation, providing critical insights into how long information is retained beyond the moment of first use.</strong>
+                </p>
+                <p style="margin-top: 20px; color: var(--primary-color); font-weight: 600;">
+                    🚀 TeleEgo, together with our released MPT evaluation framework and code, provides a unified setting to assess both real-time correctness 
+                    and long-term memory persistence, paving the way for future work on practical egocentric AI assistants.
                 </p>
             </div>
 
-            <h3 style="text-align: center; margin-top: 60px;">Auditable Evidence Compliance</h3>
-            <p style="text-align: center; max-width: 800px; margin: 20px auto 40px;">
-                Every QA item includes <strong>time-stamped evidence spans</strong> and <strong>required-modality tags</strong>. 
-                Systems must localize verifiable support from the correct modalities.
-            </p>
-
-            <div class="feature-grid">
-                <div class="feature-card fade-in">
-                    <span class="feature-icon">🎯</span>
-                    <h4>Temporal Grounding</h4>
-                    <p>Models must identify the exact time intervals containing relevant evidence, preventing vague or hallucinated responses.</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <span class="feature-icon">🔊</span>
-                    <h4>Modality Compliance</h4>
-                    <p>Each question specifies required modalities (video, speech, narration). Answers must draw from the correct sources.</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <span class="feature-icon">📝</span>
-                    <h4>Evidence Overlap</h4>
-                    <p>Submitted evidence must overlap with annotated spans, enabling quantitative assessment of retrieval quality.</p>
-                </div>
+            <div class="metric-card fade-in">
+                <div class="metric-title">📋 Task Categories</div>
+                <p>
+                    Questions are organized into three cognitive dimensions with 12 fine-grained subtasks:
+                </p>
+                <ul>
+                    <li><strong>Memory (58.8% of questions):</strong> Ultra-long Memory, Short-term Memory, Long-term Memory, Entity Tracking, Temporal Comparison & Interval</li>
+                    <li><strong>Understanding (27.3%):</strong> Intent Inference, Causal Understanding, Cross-modal Understanding, Multi-step Reasoning</li>
+                    <li><strong>Cross-Memory Reasoning (13.9%):</strong> Cross-entity Relation, Temporal Chain Understanding, Cross-temporal Causality</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -1153,63 +1298,111 @@
     <!-- Dataset Section -->
     <section id="dataset" class="alt-bg">
         <div class="container">
-            <h2>Dataset & Scenarios</h2>
+            <h2>📚 Dataset</h2>
             
-            <!-- ======= Modified scenarios grid: 4 items in one row on desktop ======= -->
-            <div class="feature-grid scenarios">
-                <div class="feature-card fade-in">
-                    <span class="feature-icon">💼</span>
-                    <h4>Work &amp; Study</h4>
-                    <p>Meetings, focused learning, research, and collaborative tasks.</p>
+            <p style="text-align: center; max-width: 900px; margin: 0 auto 40px; font-size: 1.15em;">
+                TeleEgo comprises <strong>70+ hours of continuous egocentric video</strong> from 5 diverse participants, 
+                with <strong>3,291 manually annotated questions</strong> covering 12 cognitive tasks.
+            </p>
+
+            <div class="stats-grid fade-in">
+                <div class="stat-card">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">Participants</span>
                 </div>
-                <div class="feature-card fade-in">
-                    <span class="feature-icon">🏡</span>
-                    <h4>Lifestyle &amp; Routines</h4>
-                    <p>Daily habits, home organization, wellness, and time management.</p>
+                <div class="stat-card">
+                    <span class="stat-number">70+</span>
+                    <span class="stat-label">Hours of Video</span>
                 </div>
-                <div class="feature-card fade-in">
-                    <span class="feature-icon">👥</span>
-                    <h4>Social Activities</h4>
-                    <p>Conversations, gatherings, group coordination, and shared events.</p>
+                <div class="stat-card">
+                    <span class="stat-number">3,291</span>
+                    <span class="stat-label">QA Pairs</span>
                 </div>
-                <div class="feature-card fade-in">
-                    <span class="feature-icon">🎭</span>
-                    <h4>Outings &amp; Culture</h4>
-                    <p>Dining, entertainment, museums, concerts, and city exploration.</p>
+                <div class="stat-card">
+                    <span class="stat-number">12</span>
+                    <span class="stat-label">Task Categories</span>
                 </div>
             </div>
-            <!-- ======= End modified scenarios grid ======= -->
 
-            <h3 style="text-align: center; margin-top: 60px;">Multi-Modal Streams</h3>
+            <h3 style="text-align: center; margin-top: 80px;">📊 Data Collection</h3>
+            
             <div class="timeline">
-                <div class="timeline-item fade-in">
-                    <div class="timeline-icon">🎥</div>
-                    <div class="timeline-content">
-                        <h4 style="color: var(--primary-color); margin-bottom: 10px;">Egocentric Video</h4>
-                        <p>Continuous first-person visual stream captured from wearable cameras</p>
+                <div class="timeline-item">
+                    <span class="timeline-icon">📹</span>
+                    <div class="timeline-content fade-in">
+                        <h4>Egocentric Video Capture</h4>
+                        <p>
+                            Participants wore first-person cameras continuously for 3 days, recording authentic daily activities 
+                            across work, social, lifestyle, and cultural scenarios. Average video length: 14.4 hours per participant.
+                        </p>
                     </div>
                 </div>
-                <div class="timeline-item fade-in">
-                    <div class="timeline-icon">🔊</div>
-                    <div class="timeline-content">
-                        <h4 style="color: var(--primary-color); margin-bottom: 10px;">Speech & Ambient Audio</h4>
-                        <p>Full audio track including conversations and environmental sounds</p>
+
+                <div class="timeline-item">
+                    <span class="timeline-icon">🔊</span>
+                    <div class="timeline-content fade-in">
+                        <h4>Multi-Modal Processing</h4>
+                        <p>
+                            Raw videos were processed to extract synchronized audio streams, speech transcripts via ASR, 
+                            and visual narrations describing participant actions. All modalities are aligned to a unified timeline 
+                            with millisecond precision.
+                        </p>
                     </div>
                 </div>
-                <div class="timeline-item fade-in">
-                    <div class="timeline-icon">📝</div>
-                    <div class="timeline-content">
-                        <h4 style="color: var(--primary-color); margin-bottom: 10px;">Visual Narration</h4>
-                        <p>Human-authored descriptions of visual events with precise timestamps</p>
+
+                <div class="timeline-item">
+                    <span class="timeline-icon">✏️</span>
+                    <div class="timeline-content fade-in">
+                        <h4>Question Annotation</h4>
+                        <p>
+                            Expert annotators generated 3,291 questions using GPT-4o for initial candidate generation, 
+                            followed by rigorous human verification. Each question includes precise temporal grounding (evidence timestamps) 
+                            and required modality information.
+                        </p>
                     </div>
                 </div>
-                <div class="timeline-item fade-in">
-                    <div class="timeline-icon">💬</div>
-                    <div class="timeline-content">
-                        <h4 style="color: var(--primary-color); margin-bottom: 10px;">ASR Transcripts</h4>
-                        <p>Automatic speech recognition text aligned with audio stream</p>
+
+                <div class="timeline-item">
+                    <span class="timeline-icon">✅</span>
+                    <div class="timeline-content fade-in">
+                        <h4>Quality Control</h4>
+                        <p>
+                            Multiple rounds of quality checks ensure factual accuracy, temporal correctness, question clarity, 
+                            and answer uniqueness. All personal identifiable information is removed or anonymized.
+                        </p>
                     </div>
                 </div>
+            </div>
+
+            <h3 style="text-align: center; margin-top: 80px;">🎯 Covered Scenarios</h3>
+            
+            <div class="feature-grid scenarios fade-in">
+                <div class="feature-card">
+                    <span class="feature-icon">💼</span>
+                    <h4>Work & Study</h4>
+                    <p>Presentations, meetings, coding, studying, reception tasks</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🎮</span>
+                    <h4>Social Activities</h4>
+                    <p>Card games (UNO, Mahjong, Poker), video games, pool</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🏠</span>
+                    <h4>Lifestyle & Routines</h4>
+                    <p>Shopping, cooking, walking, fitness</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🍽️</span>
+                    <h4>Outings & Culture</h4>
+                    <p>Dining out, dating, museum visits</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="https://huggingface.co/datasets/David0219/TeleEgo" class="btn btn-primary" target="_blank">
+                    🤗 Download Dataset on Hugging Face
+                </a>
             </div>
         </div>
     </section>
@@ -1218,41 +1411,36 @@
     <section id="submit">
         <div class="container">
             <h2>📤 Submit Your Results</h2>
-            <p style="text-align: center; max-width: 900px; margin: 0 auto 50px; font-size: 1.15em;">
-                We welcome submissions from all researchers! Choose one of the methods below to submit your model's evaluation results.
+            <p style="text-align: center; max-width: 900px; margin: 0 auto 60px; font-size: 1.1em;">
+                We welcome submissions from all researchers! Submit your model's predictions to appear on the official leaderboard. 
+                Choose your preferred submission method below.
             </p>
 
-            <!-- Method 1: GitHub Pull Request -->
+            <!-- Method 1: GitHub PR -->
             <div class="submit-method fade-in">
                 <h3>
                     <span class="method-icon">🔀</span>
                     Method 1: GitHub Pull Request (Recommended)
                 </h3>
                 <p style="font-size: 1.05em; margin: 20px 0;">
-                    This is the preferred method for official leaderboard submissions. Your results will be reviewed and added to the leaderboard.
+                    Submit via GitHub PR for the fastest processing and automatic validation.
                 </p>
 
                 <div class="submit-steps">
                     <strong style="display: block; margin-bottom: 15px; font-size: 1.1em;">📝 Steps:</strong>
                     <ol>
-                        <li>Fork our repository: <a href="https://github.com/Programmergg/TeleEgo" target="_blank" style="color: var(--primary-color);">github.com/Programmergg/TeleEgo</a></li>
-                        <li>Create a new directory under <code>submissions/</code> with your model name:<br>
-                            <code>submissions/your-model-name-YYYY-MM-DD/</code>
+                        <li>Fork the <a href="https://github.com/Programmergg/TeleEgo" target="_blank" style="color: var(--primary-color);">TeleEgo repository</a></li>
+                        <li>Create a new folder under <code>submissions/</code> with format: <code>YYYY-MM-DD_YourModelName/</code></li>
+                        <li>Add your submission files:
+                            <ul style="margin-left: 30px; margin-top: 10px;">
+                                <li><code>results.json</code> - Your model predictions</li>
+                                <li><code>metadata.json</code> - Model information</li>
+                                <li><code>README.md</code> - Brief description</li>
+                            </ul>
                         </li>
-                        <li>Add your submission files (see requirements below)</li>
-                        <li>Create a pull request with the title: <code>[Submission] Your Model Name</code></li>
-                        <li>Our team will review and merge your submission within 3-5 business days</li>
+                        <li>Create a pull request with title: <code>[Submission] YourModelName</code></li>
+                        <li>Our team will review and merge within 3-5 business days</li>
                     </ol>
-                </div>
-
-                <div class="requirements-box">
-                    <h4>📋 Required Files:</h4>
-                    <ul>
-                        <li><code>results.json</code> - Your model's predictions (see format below)</li>
-                        <li><code>metadata.json</code> - Model information and configuration</li>
-                        <li><code>README.md</code> - Brief description of your model and approach</li>
-                        <li>(Optional) <code>paper.pdf</code> - Technical paper if available</li>
-                    </ul>
                 </div>
 
                 <div class="btn-group" style="margin-top: 25px;">
@@ -1308,7 +1496,7 @@
                     <ol>
                         <li>Prepare your submission files as a ZIP archive</li>
                         <li>Include all required files: <code>results.json</code>, <code>metadata.json</code>, <code>README.md</code></li>
-                        <li>Email to: <a href="mailto:chengxuyuangg@gmail.com" style="color: var(--primary-color); font-weight: 600;">chengxuyuangg@gmail.com</a></li>
+                        <li>Email to: <a href="mailto:teleego.benchmark@gmail.com" style="color: var(--primary-color); font-weight: 600;">teleego.benchmark@gmail.com</a></li>
                         <li>Use subject line: <code>[TeleEgo Submission] Your Model Name</code></li>
                         <li>We'll confirm receipt within 48 hours</li>
                     </ol>
@@ -1337,13 +1525,10 @@
     {
       <span class="json-key">"question_id"</span>: <span class="json-string">"Q001"</span>,
       <span class="json-key">"answer"</span>: <span class="json-string">"Your model's answer"</span>,
-      <!-- <span class="json-key">"confidence"</span>: <span class="json-number">0.95</span>, -->
       <span class="json-key">"response_time"</span>: <span class="json-number">2.5</span>,
       <span class="json-key">"evidence_spans"</span>: [
         {
-          <!-- <span class="json-key">"start_time"</span>: <span class="json-number">120.5</span>, -->
-          <!-- <span class="json-key">"end_time"</span>: <span class="json-number">135.2</span>, -->
-          <span class="json-key">"modality"</span>: <span class="json-string">""video", "audio", "text""</span>
+          <span class="json-key">"modality"</span>: <span class="json-string">"video"</span>
         }
       ]
     }
@@ -1360,8 +1545,8 @@
   <span class="json-key">"model_name"</span>: <span class="json-string">"YourModel-v1.0"</span>,
   <span class="json-key">"organization"</span>: <span class="json-string">"Your Organization"</span>,
   <span class="json-key">"authors"</span>: [<span class="json-string">"Author 1"</span>, <span class="json-string">"Author 2"</span>],
-  <span class="json-key">"contact_email"</span>: <span class="json-string">"your-email@example.com"</span>,
-  <span class="json-key">"paper_url"</span>: <span class="json-string">"https://arXiv.org/abs/..."</span>,
+  <span class="json-key">"contact_email"</span>: <span class="json-string">"your.email@example.com"</span>,
+  <span class="json-key">"paper_url"</span>: <span class="json-string">"https://arxiv.org/abs/..."</span>,
   <span class="json-key">"code_url"</span>: <span class="json-string">"https://github.com/..."</span>,
   <span class="json-key">"model_description"</span>: <span class="json-string">"Brief description of your approach"</span>,
   <span class="json-key">"model_parameters"</span>: <span class="json-string">"7B"</span>,
@@ -1429,7 +1614,7 @@
     <footer>
         <div class="container">
             <ul class="footer-links">
-                <li>📧 Email: chengxuyuangg@gmail.com</li>
+                <li>📧 Email: <a href="mailto:chengxuyuangg@gmail.com">teleego.benchmark@gmail.com</a></li>
                 <li>💬 GitHub Issues: <a href="https://github.com/Programmergg/TeleEgo/issues" target="_blank">Report Issues</a></li>
             </ul>
             <p style="margin-top: 40px;">© 2025 TeleEgo Benchmark. All rights reserved.</p>
@@ -1454,13 +1639,14 @@
 
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        // Smooth scroll for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({
                         behavior: 'smooth',
                         block: 'start'
                     });
