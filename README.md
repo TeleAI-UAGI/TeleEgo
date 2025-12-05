@@ -15,6 +15,9 @@
     <a href="https://teleai-uagi.github.io/TeleEgo/">
       <img alt="Page" src="https://img.shields.io/badge/Project Page-Link-green">
     </a>
+    <a href="https://seline02.github.io/2025/11/10/TeleEgo-%E6%B5%81%E5%BC%8F%E5%85%A8%E6%A8%A1%E6%80%81%E7%AC%AC%E4%B8%80%E4%BA%BA%E7%A7%B0%E8%AF%84%E6%B5%8B%E5%9F%BA%E5%87%86/">
+      <img alt="Blog" src="https://img.shields.io/badge/Blog-Post-blue">
+    </a>
   </p>
 
   <img src="assets/teaser.png" alt="Teaser" style="width:80%; max-width:700px;">
@@ -101,31 +104,102 @@ Each QA instance includes:
 ```
 TeleEgo/
 │
-├── teleego_data/                # Dataset samples / metadata (link provided separately)
+├── teleego_data/                # Dataset samples / metadata
+│   ├── outputs/                 # Output results
+│   ├── QAs/                     # Question-Answer pairs
+│   └── video_merged/            # Merged video files
 ├── weights/                     # Pre-trained weights (MiniCPM-o, Qwen2.5-Omni, ...)
-├── TeleEgo_gemini25_pro_eval.py # Evaluation scripts
-├── TeleEgo_gpt4o_eval.py        # Evaluation scripts
-├── TeleEgo_minicpm_eval.py      # Evaluation scripts
-├── TeleEgo_qwen25_eval.py       # Evaluation scripts
-├── TeleEgo_qweno25_eval.py      # Evaluation scripts
-├── TeleEgo_videochat_eval.py    # Evaluation scripts
+├── evaluate_gemini25_pro.py     # Evaluation script for Gemini 2.5 Pro
+├── evaluate_gpt_4o.py           # Evaluation script for GPT-4o
+├── evaluate_minicpm_o.py        # Evaluation script for MiniCPM-o
+├── evaluate_qwen25_omni.py      # Evaluation script for Qwen2.5-Omni
+├── evaluate_qwen25_vl.py        # Evaluation script for Qwen2.5-VL
+├── evaluate_videochat_online.py # Evaluation script for VideoChat
+├── metrics.py                   # Evaluation metrics
+├── utils.py                     # Utility functions
+├── run.sh                       # Execution script
 └── README.md                    # This file
 ```
 
 ## 🚀 Usage
 
-### 📥 Dataset Access
+### 📥 Dataset Setup
 
-Request dataset from Hugging face:
-📝 [**TeleEgo Dataset**](https://huggingface.co/datasets/David0219/TeleEgo).
+1. **Download the dataset** from Hugging Face: 🔗 [**TeleEgo Dataset**](https://huggingface.co/datasets/David0219/TeleEgo)
+   
+   Or Baidu Netdisk: 🔗 [**TeleEgo Dataset**](https://pan.baidu.com/s/1T8LxTbrWIYUDXZlJyuR5Ew?pwd=ay5q)
 
-Or Baidu Netdisk: 📝 [**TeleEgo Dataset**](https://pan.baidu.com/s/1T8LxTbrWIYUDXZlJyuR5Ew?pwd=ay5q).
+2. **Organize the dataset** in the following structure:
+```
+./TeleEgo/teleego_data/
+├── QAs/                              # Question-Answer dataset
+│   ├── merged_P1_A.json             # QA data for participant P1
+│   ├── merged_P2_A.json             # QA data for participant P2
+│   ├── merged_P3_A.json             # QA data for participant P3
+│   ├── merged_P4_A.json             # QA data for participant P4
+│   └── merged_P5_A.json             # QA data for participant P5
+├── outputs/                          # Evaluation outputs
+│   ├── gemini25_pro/                # Results for Gemini 2.5 Pro
+│   ├── gpt-4o/                      # Results for GPT-4o
+│   ├── minicpm_o/                   # Results for MiniCPM-o
+│   ├── qwen25_omni/                 # Results for Qwen2.5-Omni
+│   ├── qwen25_vl/                   # Results for Qwen2.5-VL
+│   └── videochat-online/            # Results for VideoChat-Online
+└── video_merged/                     # Merged long videos with timestamps
+    ├── merged_P1.mp4                # P1's 3-day video merged into one file
+    ├── merged_P2.mp4                # P2's 3-day video merged into one file
+    ├── merged_P3.mp4                # P3's 3-day video merged into one file
+    ├── merged_P4.mp4                # P4's 3-day video merged into one file
+    ├── merged_P5.mp4                # P5's 3-day video merged into one file
+    ├── timeline_P1.json             # P1's timestamp mapping file
+    ├── timeline_P2.json             # P2's timestamp mapping file
+    ├── timeline_P3.json             # P3's timestamp mapping file
+    ├── timeline_P4.json             # P4's timestamp mapping file
+    └── timeline_P5.json             # P5's timestamp mapping file
+```
+
+### 🔧 Environment Setup
+
+Set up your environment according to the official requirements of the model you want to evaluate:
+
+- **Qwen2.5-Omni**: Follow the [official Qwen2.5-Omni setup guide](https://github.com/QwenLM/Qwen2.5-Omni)
+- **MiniCPM-o**: Follow the [official MiniCPM-o setup guide](https://github.com/OpenBMB/MiniCPM-o)
+- **Qwen2.5-VL**: Follow the [official Qwen2.5-VL setup guide](https://github.com/QwenLM/Qwen2-VL)
+- **VideoChat-Online**: Follow the [official VideoChat-Online setup guide](https://github.com/MCG-NJU/VideoChat-Online)
+- **GPT-4o / Gemini 2.5 Pro**: Configure your API credentials in `run.sh`
 
 ### 🧪 Running Evaluations
 
+To evaluate a model on a specific GPU, use the following command format:
 ```bash
-python TeleEgo_gpt4o_eval.py
+sh run.sh  
 ```
+
+**Examples:**
+```bash
+# Evaluate Qwen2.5-Omni on GPU 0
+sh run.sh eval_qwen25_omni 0
+```
+
+**Available evaluation functions:**
+- `eval_qwen25_omni` - Qwen2.5-Omni model
+- `eval_qwen25_vl` - Qwen2.5-VL model  
+- `eval_minicpm_o` - MiniCPM-o model
+- `eval_videochat_online` - VideoChat-Online model
+- `eval_gpt_4o` - GPT-4o (requires API key)
+- `eval_gemini25_pro` - Gemini 2.5 Pro (requires API key)
+
+
+### 📊 Computing Metrics
+
+After evaluation, the results will be saved in `./teleego_data/outputs/<model_name>/`. To compute evaluation metrics:
+```bash
+python metrics.py
+```
+
+This will calculate performance metrics across all evaluation dimensions (Memory, Understanding, Cross-Memory Reasoning).
+
+### 📤 Submit Results
 
 Submit your results to our 🏆 [**Online Leaderboard**](https://programmergg.github.io/jrliu.github.io/#leaderboard).
 
