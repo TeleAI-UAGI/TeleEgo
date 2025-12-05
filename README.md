@@ -6,18 +6,10 @@
 
   <!-- 项目徽章 -->
   <p>
-    <a href="https://huggingface.co/datasets/David0219/TeleEgo">
-      <img alt="Hugging Face" src="https://img.shields.io/badge/HuggingFace-Dataset-orange">
-    </a>
-    <a href="https://arxiv.org/abs/2510.23981">
-      <img alt="arXiv" src="https://img.shields.io/badge/ArXiv-2510.23981-b31b1b.svg">
-    </a>
-    <a href="https://teleai-uagi.github.io/TeleEgo/">
-      <img alt="Page" src="https://img.shields.io/badge/Project Page-Link-green">
-    </a>
-    <a href="https://seline02.github.io/2025/11/10/TeleEgo-%E6%B5%81%E5%BC%8F%E5%85%A8%E6%A8%A1%E6%80%81%E7%AC%AC%E4%B8%80%E4%BA%BA%E7%A7%B0%E8%AF%84%E6%B5%8B%E5%9F%BA%E5%87%86/">
-      <img alt="Blog" src="https://img.shields.io/badge/Blog-Post-blue">
-    </a>
+    <a href="https://huggingface.co/datasets/David0219/TeleEgo"><img alt="Hugging Face" src="https://img.shields.io/badge/HuggingFace-Dataset-orange"></a>
+    <a href="https://arxiv.org/abs/2510.23981"><img alt="arXiv" src="https://img.shields.io/badge/ArXiv-2510.23981-b31b1b.svg"></a>
+    <a href="https://teleai-uagi.github.io/TeleEgo/"><img alt="Page" src="https://img.shields.io/badge/Project_Page-Link-green"></a>
+    <a href="https://seline02.github.io/2025/11/10/TeleEgo-%E6%B5%81%E5%BC%8F%E5%85%A8%E6%A8%A1%E6%80%81%E7%AC%AC%E4%B8%80%E4%BA%BA%E7%A7%B0%E8%AF%84%E6%B5%8B%E5%9F%BA%E5%87%86/"><img alt="Blog" src="https://img.shields.io/badge/Blog-Post-blue"></a>
   </p>
 
   <img src="assets/teaser.png" alt="Teaser" style="width:80%; max-width:700px;">
@@ -103,7 +95,6 @@ Each QA instance includes:
 
 ```
 TeleEgo/
-│
 ├── teleego_data/                # Dataset samples / metadata
 │   ├── outputs/                 # Output results
 │   ├── QAs/                     # Question-Answer pairs
