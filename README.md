@@ -238,7 +238,7 @@ If you find our **TeleEgo** in your research, please cite:
 ```bibtex
 @article{yan2025teleego,
   title={TeleEgo: Benchmarking Egocentric AI Assistants in the Wild},
-  author={Yan, Jiaqi and Ren, Ruilong and Liu, Jingren and Xu, Shuning and Wang, Ling and Wang, Yiheng and Wang, Yun and Zhang, Long and Chen, Xiangyu and Sun, Changzhi and others},
+  author={Yan, Jiaqi and Ren, Ruilong and Liu, Jingren and Xu, Shuning and Wang, Ling and Wang, Yiheng and Zhong, Xinlin and Wang, Yun and Zhang, Long and Chen, Xiangyu and Sun, Changzhi and others},
   journal={arXiv preprint arXiv:2510.23981},
   year={2025}
 }
