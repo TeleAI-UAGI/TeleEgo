@@ -260,7 +260,14 @@ Dataset usage is restricted under a **research-only license**.
 
 ## 📬 Contact
 
-If you have any questions, please feel free to reach out: chxy95@gmail.com.
+If you have any questions, please feel free to reach out: [chxy95@gmail.com](mailto:chxy95@gmail.com).
+
+
+---
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=TeleAI-UAGI/TeleEgo&type=date&legend=top-left)](https://www.star-history.com/#TeleAI-UAGI/TeleEgo&type=date&legend=top-left)
 
 ---
 
