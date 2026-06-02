@@ -280,7 +280,7 @@ Made with ❤️ by the Ubiquitous AGI team at TeleAI.
 </div>
 
 <div align="center" style="margin-top: 10px;">
-  <img src="assets/TeleAI.jpg" alt="TeleAI Logo" width="120px" />
+  <img src="assets/TeleAI.png" alt="TeleAI Logo" width="120px" />
   &nbsp;&nbsp;&nbsp;
   <img src="assets/TeleEgo.png" alt="TeleEgo Logo" width="120px" />
 </div>
