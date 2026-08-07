@@ -267,7 +267,12 @@ If you have any questions, please feel free to reach out: [chxy95@gmail.com](mai
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/chart?repos=TeleAI-UAGI/TeleEgo&type=date&legend=bottom-right&sealed_token=vpgyNzFTd5oYgwUZ8RF0gTyHSIdVPq7AMhu8lgyafj4XlBHh0gRsMcs4to6HwzHXI6t6n23saPNpU14CgLRPvL-9MOlEvb25y1QHDHt-fslrMiw85k86361mzZ-XcP85hm34Vtj7SxPx-J9Zsdd5yE2NZWSCv2P3k0YdWo0I6-RD-Mmp9HtIqAhV7Z1T)](https://www.star-history.com/?repos=TeleAI-UAGI%2FTeleEgo&type=date&legend=bottom-right)
+<a href="https://github.com/TeleAI-UAGI/TeleEgo/stargazers"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/star-history-dark.svg">
+  <img alt="Star history chart of TeleAI-UAGI/TeleEgo" src="assets/star-history-light.svg">
+</picture></a>
+
+<sub>Regenerated weekly by [a scheduled workflow](.github/workflows/star-history.yml); the previous [star-history.com](https://www.star-history.com/) live chart broke when GitHub restricted the stargazers API to repo admins and collaborators in June 2026 — regenerating the sealed token does not help (the chart endpoint still times out server-side).</sub>
 
 ---
 

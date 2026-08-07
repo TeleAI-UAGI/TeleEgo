@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="720" height="360" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
+<title>Cumulative GitHub stars over time: 63 as of 2026-08-07</title>
+<line x1="52" y1="247.0" x2="636" y2="247.0" stroke="#2c2c2a" stroke-width="1"/>
+<text x="44" y="251.0" text-anchor="end" fill="#898781" style="font-variant-numeric: tabular-nums">20</text>
+<line x1="52" y1="174.0" x2="636" y2="174.0" stroke="#2c2c2a" stroke-width="1"/>
+<text x="44" y="178.0" text-anchor="end" fill="#898781" style="font-variant-numeric: tabular-nums">40</text>
+<line x1="52" y1="101.0" x2="636" y2="101.0" stroke="#2c2c2a" stroke-width="1"/>
+<text x="44" y="105.0" text-anchor="end" fill="#898781" style="font-variant-numeric: tabular-nums">60</text>
+<line x1="52" y1="28.0" x2="636" y2="28.0" stroke="#2c2c2a" stroke-width="1"/>
+<text x="44" y="32.0" text-anchor="end" fill="#898781" style="font-variant-numeric: tabular-nums">80</text>
+<line x1="52" y1="320.0" x2="636" y2="320.0" stroke="#383835" stroke-width="1"/>
+<text x="81.1" y="340" text-anchor="middle" fill="#898781">Nov 2025</text>
+<text x="228.9" y="340" text-anchor="middle" fill="#898781">Jan 2026</text>
+<text x="371.9" y="340" text-anchor="middle" fill="#898781">Mar</text>
+<text x="519.7" y="340" text-anchor="middle" fill="#898781">May</text>
+<path d="M52.0,316.4 L73.8,195.9 L76.2,184.9 L78.7,174.0 L88.3,170.4 L90.8,166.7 L95.6,163.1 L119.9,159.4 L163.5,155.8 L190.1,141.1 L221.6,137.5 L260.4,133.9 L262.8,130.2 L270.1,126.6 L272.5,122.9 L282.2,119.2 L362.2,115.6 L408.2,111.9 L413.1,108.3 L442.1,104.6 L488.2,101.0 L570.6,97.4 L573.0,93.7 L636.0,90.1" fill="none" stroke="#3987e5" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="636.0" cy="90.1" r="4" fill="#3987e5"/>
+<text x="646.0" y="94.1" fill="#ffffff" font-weight="600" font-size="13">63 ★</text>
+<text x="636" y="354" text-anchor="end" fill="#898781" font-size="11">as of 2026-08-07</text>
+</svg>
