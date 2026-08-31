@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="720" height="360" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
-<title>Cumulative GitHub stars over time: 66 as of 2026-08-24</title>
+<title>Cumulative GitHub stars over time: 66 as of 2026-08-31</title>
 <line x1="52" y1="247.0" x2="636" y2="247.0" stroke="#2c2c2a" stroke-width="1"/>
 <text x="44" y="251.0" text-anchor="end" fill="#898781" style="font-variant-numeric: tabular-nums">20</text>
 <line x1="52" y1="174.0" x2="636" y2="174.0" stroke="#2c2c2a" stroke-width="1"/>
@@ -17,5 +17,5 @@
 <path d="M52.0,316.4 L69.2,195.9 L71.1,184.9 L73.1,174.0 L80.7,170.4 L82.6,166.7 L86.5,163.1 L105.6,159.4 L140.1,155.8 L161.1,141.1 L186.0,137.5 L216.7,133.9 L218.6,130.2 L224.3,126.6 L226.2,122.9 L233.9,119.2 L297.1,115.6 L333.5,111.9 L337.3,108.3 L360.3,104.6 L396.7,101.0 L461.8,97.4 L463.7,93.7 L513.5,90.1 L616.9,86.4 L632.2,82.8 L636.0,79.1" fill="none" stroke="#3987e5" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
 <circle cx="636.0" cy="79.1" r="4" fill="#3987e5"/>
 <text x="646.0" y="83.1" fill="#ffffff" font-weight="600" font-size="13">66 ★</text>
-<text x="636" y="354" text-anchor="end" fill="#898781" font-size="11">as of 2026-08-24</text>
+<text x="636" y="354" text-anchor="end" fill="#898781" font-size="11">as of 2026-08-31</text>
 </svg>
