@@ -120,6 +120,8 @@ TeleEgo/
    
    Or Baidu Netdisk: 🔗 [**TeleEgo Dataset**](https://pan.baidu.com/s/1T8LxTbrWIYUDXZlJyuR5Ew?pwd=ay5q)
 
+   **Official transcripts (optional):** time-aligned transcripts for every source video session are released separately in 🔗 [**TeleEgo-Source**](https://huggingface.co/datasets/H-oliday/TeleEgo-Source). Each session provides `*_speech.srt` (automatically generated, then manually verified, with speaker identities where available) and `*_narration.srt` (visual narrations of activities, attended objects, scene context, and other salient events). Use these instead of the on-the-fly Whisper ASR in `utils.py` if you need high-quality speech text.
+
 2. **Organize the dataset** in the following structure:
 ```
 ./TeleEgo/teleego_data/
