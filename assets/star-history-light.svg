@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="720" height="360" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
-<title>Cumulative GitHub stars over time: 66 as of 2026-09-07</title>
+<title>Cumulative GitHub stars over time: 67 as of 2026-09-14</title>
 <line x1="52" y1="247.0" x2="636" y2="247.0" stroke="#e1e0d9" stroke-width="1"/>
 <text x="44" y="251.0" text-anchor="end" fill="#898781" style="font-variant-numeric: tabular-nums">20</text>
 <line x1="52" y1="174.0" x2="636" y2="174.0" stroke="#e1e0d9" stroke-width="1"/>
@@ -9,13 +9,14 @@
 <line x1="52" y1="28.0" x2="636" y2="28.0" stroke="#e1e0d9" stroke-width="1"/>
 <text x="44" y="32.0" text-anchor="end" fill="#898781" style="font-variant-numeric: tabular-nums">80</text>
 <line x1="52" y1="320.0" x2="636" y2="320.0" stroke="#c3c2b7" stroke-width="1"/>
-<text x="75.0" y="340" text-anchor="middle" fill="#898781">Nov 2025</text>
-<text x="191.8" y="340" text-anchor="middle" fill="#898781">Jan 2026</text>
-<text x="304.7" y="340" text-anchor="middle" fill="#898781">Mar</text>
-<text x="421.5" y="340" text-anchor="middle" fill="#898781">May</text>
-<text x="538.3" y="340" text-anchor="middle" fill="#898781">Jul</text>
-<path d="M52.0,316.4 L69.2,195.9 L71.1,184.9 L73.1,174.0 L80.7,170.4 L82.6,166.7 L86.5,163.1 L105.6,159.4 L140.1,155.8 L161.1,141.1 L186.0,137.5 L216.7,133.9 L218.6,130.2 L224.3,126.6 L226.2,122.9 L233.9,119.2 L297.1,115.6 L333.5,111.9 L337.3,108.3 L360.3,104.6 L396.7,101.0 L461.8,97.4 L463.7,93.7 L513.5,90.1 L616.9,86.4 L632.2,82.8 L636.0,79.1" fill="none" stroke="#2a78d6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-<circle cx="636.0" cy="79.1" r="4" fill="#2a78d6"/>
-<text x="646.0" y="83.1" fill="#0b0b0b" font-weight="600" font-size="13">66 ★</text>
-<text x="636" y="354" text-anchor="end" fill="#898781" font-size="11">as of 2026-09-07</text>
+<text x="73.6" y="340" text-anchor="middle" fill="#898781">Nov 2025</text>
+<text x="183.6" y="340" text-anchor="middle" fill="#898781">Jan 2026</text>
+<text x="289.9" y="340" text-anchor="middle" fill="#898781">Mar</text>
+<text x="399.9" y="340" text-anchor="middle" fill="#898781">May</text>
+<text x="509.8" y="340" text-anchor="middle" fill="#898781">Jul</text>
+<text x="621.6" y="340" text-anchor="middle" fill="#898781">Sep</text>
+<path d="M52.0,316.4 L68.2,195.9 L70.0,184.9 L71.8,174.0 L79.0,170.4 L80.8,166.7 L84.4,163.1 L102.5,159.4 L134.9,155.8 L154.7,141.1 L178.2,137.5 L207.0,133.9 L208.8,130.2 L214.2,126.6 L216.0,122.9 L223.2,119.2 L282.7,115.6 L317.0,111.9 L320.6,108.3 L342.2,104.6 L376.4,101.0 L437.7,97.4 L439.5,93.7 L486.4,90.1 L583.7,86.4 L598.1,82.8 L601.8,79.1 L636.0,75.4" fill="none" stroke="#2a78d6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="636.0" cy="75.4" r="4" fill="#2a78d6"/>
+<text x="646.0" y="79.4" fill="#0b0b0b" font-weight="600" font-size="13">67 ★</text>
+<text x="636" y="354" text-anchor="end" fill="#898781" font-size="11">as of 2026-09-14</text>
 </svg>
